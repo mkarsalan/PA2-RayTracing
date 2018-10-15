@@ -145,7 +145,7 @@ This result was generated using the following command and took 2194.49 seconds t
 <li>Return the node.</li>
 </ol>
 
-<p>One potential problem to consider: what happens if all the primitives lie on one side of the split point? We will get a segfault because of infinite attempted recursive calls. You need some logic to handle the case where either the left or right primitive vector is empty.</p>
+<p><del>One potential problem to consider: what happens if all the primitives lie on one side of the split point? We will get a segfault because of infinite attempted recursive calls. You need some logic to handle the case where either the left or right primitive vector is empty.</del></p>
 
 <p>We've provided a helpful BVH visualization mode which you can use to debug your implementation. To enter this mode, press <code>V</code>. You can then navigate around the BVH levels using the left, right, and up keys. The BVH viz view looks like this:</p>
 
