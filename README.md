@@ -1,6 +1,7 @@
 ![Screenshot](https://drive.google.com/uc?id=1EH15q8AJiSHUhh85o-MNRoZMk9Jnon1C)
  
 <h1>Assignment 2: Ray Tracing</h1>
+<h2>[Deadline: Monday, 14th Oct 2019]</h2>
 
 |Flag and parameters | Description|
 |:-----:|------|
@@ -45,8 +46,7 @@
 
 Cell render mode lets you use your mouse to highlight a region of interest so that you can see quick results in that area when fiddling with per pixel ray count, per light ray count, or ray depth.
 
-<h1>Part 1 - Ray Generation and Scene Intersection</h1>
-<h2>[Deadline: 8th Oct]</h2>
+<h1>Ray Generation and Scene Intersection</h1>
 
 <h2><b>Task 1: Filling in the sample loop</b></h2>
 
@@ -114,11 +114,11 @@ This result was generated using the following command and took 2194.49 seconds t
 
 ***********************************************************************************************************
 
-<h1>Part 2 - Bounding Volume Hierarchy</h1>
-<h2>[Deadline: 15th Oct]</h2>
+<h1>Bounding Volume Hierarchy</h1>
+
 
 <div class="markdown article-content">
-<h2>Task 1: Constructing the BVH</h2>
+<h2>Task 5: Constructing the BVH</h2>
 
 <p>Implement the function <code>BVHAccel:construct_bvh()</code> inside <em>bvh.cpp</em>. The <code>BVHAccel</code> class itself only contains a <code>BVHNode *root</code>. Each node contains a bounding box <code>bb</code>, left and right children <code>l</code> and <code>r</code>, and a pointer <code>vector&lt;Primitive *&gt; *prims</code> to a list of actual scene primitives. For interior nodes, <code>l</code> and <code>r</code> are non-<code>NULL</code>, and for leaf nodes, <code>prim</code> is non-<code>NULL</code>.</p>
 
@@ -153,11 +153,11 @@ This result was generated using the following command and took 2194.49 seconds t
 <img src="http://cs184.eecs.berkeley.edu/cs184_sp16_content/article_images/12_2.jpg" width="600px">
 </center><p></p>
 
-<h2><del>Task 2: Intersecting <code>BBox</code> </del></h2>
+<h2><del>Task 6: Intersecting <code>BBox</code> </del></h2>
 
 <p><del>Implement the function <code>BBox::intersect()</code> inside <em>bbox.cpp</em>, using the simple ray-aligned-plane intersection equation <a href="https://cs184.org/lecture/rt/slide_029">here</a> and the ray-aligned-box intersection method <a href="https://cs184.org/lecture/rt/slide_028">here</a>. Note that this function returns an <em>interval</em> of <code>t</code> values for which the ray lies inside the box.</del></p>
 
-<h2>Task 3: Intersecting <code>BVHAccel</code></h2>
+<h2>Task 7: Intersecting <code>BVHAccel</code></h2>
 
 <p>Using the previous two parts, implement the two <code>BVHAccel::intersect()</code> routines inside <em>bvh.cpp</em>. The starter code assumes that <em>root</em> is a leaf node and tests the ray against every single primitive in the tree. Your improved method should implement <a href="https://cs184.org/lecture/acceleration/slide_041">this</a> recursive traversal algorithm.</p>
 
@@ -198,4 +198,6 @@ Copyright 2017 UC Berkeley ref: https://cs184.org/article/14
 
 
 </body>
+
+
 
